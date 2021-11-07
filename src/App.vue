@@ -1,19 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <tabela :dados="json" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Tabela from "./components/Tabela.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Tabela,
+  },
+  data: function () {
+    return {
+      json: [
+        { produto: "Notebook", mes: "01/2021", quantidade: 15 },
+        { produto: "Notebook", mes: "02/2021", quantidade: 16 },
+        { produto: "Celular", mes: "01/2021", quantidade: 16 },
+        { produto: "Celular", mes: "02/2021", quantidade: 30 },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
