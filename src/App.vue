@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <tabela :dados="json" />
+    <customer/>
   </div>
 </template>
 
 <script>
+import Customer from './components/Customer.vue';
 import Tabela from "./components/Tabela.vue";
 
 export default {
   name: "App",
   components: {
     Tabela,
+    Customer,
   },
   data: function () {
     return {
